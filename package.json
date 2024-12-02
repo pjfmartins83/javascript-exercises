@@ -1,6 +1,7 @@
 {
-  "name": "factorial",
+  "name": "javascript-exercises",
   "version": "1.0.0",
+  "description": "My JavaScript exercises for learning and practice.",
   "main": "index.js",
   "scripts": {
     "test": "jest"
@@ -8,7 +9,6 @@
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "description": "",
   "devDependencies": {
     "jest": "^29.7.0"
   }
