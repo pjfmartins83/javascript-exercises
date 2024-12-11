@@ -1,4 +1,3 @@
-// factorial.test.js
 const factorial = require('./factorial');
 
 test('factorial of 0 should be 1', () => {

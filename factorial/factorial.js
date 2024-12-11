@@ -1,4 +1,3 @@
-// factorial.js
 function factorial(n) {
     if (n < 0) {
         return 'Input must be a non-negative integer';

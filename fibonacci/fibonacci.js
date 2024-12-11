@@ -1,6 +1,7 @@
 /*
 
-In the Fibonacci sequence, each number is the sum of the two preceding ones. Starting from 0 and 1, the sequence looks like this:
+In the Fibonacci sequence, each number is the sum of the two preceding ones.
+Starting from 0 and 1, the sequence looks like this:
 
 0, 1, 1, 2, 3, 5, 8, 13, 21, 34, ...
 
