@@ -1,13 +1,17 @@
-const wordCount = require('./wordCount');
+const getWordCount = require('./wordCount');
 
-test('Counts words in a Sentence', () => {
-    expect(wordCount("")).toBe(0);
+test('No words', () => {
+    expect(getWordCount('')).toBe(0);
 })
 
-test('Counts words in a Sentence', () => {
-    expect(wordCount("Hello, World!")).toBe(2);
+test('just 1 word', () => {
+    expect(getWordCount('Test')).toBe(1);
 })
 
-test('Counts words in a Sentence', () => {
-    expect(wordCount("This Is A Test")).toBe(4);
+test('2 words', () => {
+    expect(getWordCount('Hello, World!')).toBe(2);
+})
+
+test('4 words', () => {
+    expect(getWordCount('This Is A Test')).toBe(4);
 })

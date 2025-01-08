@@ -19,11 +19,11 @@ Output the number of words in the input line.
 
 **/
 
-function wordCount(n) {
+function getWordCount(n) {
     if (n === '') {
         return 0;
     }
     return n.split(' ').length;
 }
 
-module.exports = wordCount;
+module.exports = getWordCount;
