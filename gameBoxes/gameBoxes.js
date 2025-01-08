@@ -24,7 +24,7 @@ Example:
 **/
 
 function getCoinPosition(swaps) {
-    coinPosition = 1;
+    let coinPosition = 1;
 
     for(let swap of swaps) {
         if (swap === 'X') {

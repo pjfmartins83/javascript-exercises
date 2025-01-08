@@ -20,8 +20,20 @@ Output Luka’s original sentence.
 
 **/
 
-function decodeSentece(sentence) {
-    return sentence.replace(/([aeiou])p\1/g, '$1');
-}
+function decodeSentence(lukeSentence) {
+    
+    let decodedSentence = '';
+    for (let i = 0; i < lukeSentence.length; i++) {
+        decodedSentence += lukeSentence[i];
 
-module.exports = decodeSentece;
+        if ('aeiou'.includes(lukeSentence[i])) {
+            i += 2;
+        }
+    }
+
+    return decodedSentence;
+  }
+
+module.exports = decodeSentence;
+
+console.log(decodeSentence('ipi lipikepe yopoupu'));

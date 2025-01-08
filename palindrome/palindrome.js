@@ -33,10 +33,9 @@ function palindrome(string) {
 
     for (let i = 1; i <= string.length; i++) {
         reversedWord += string[string.length - i];
-    }
-    console.log(reversedWord);
+    }    
+    
     return reversedWord === string
 }
-console.log(palindrome('Borrow or rob'));
 
 module.exports = palindrome;
