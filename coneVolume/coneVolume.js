@@ -20,8 +20,10 @@ and height h. The formula to calculate the volume is
 
 **/
 
-function coneVolume (r, h) {
-    return ((Math.PI * (r * r) * h) / 3);
+function getConeVolume(r, h) {
+    let volume = ((Math.PI * (r * r) * h) / 3);
+    
+    return volume;
 }
 
-module.exports = coneVolume;
+module.exports = getConeVolume;
