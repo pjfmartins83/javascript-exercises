@@ -34,17 +34,17 @@ If the Apples and Bananas scored the same number of points, T (T for Tie).
 
 **/
 
-function teamWinner(apples, bananas) {
-    applesPoints = 3 * apples[0] + 2 * apples [1] + apples[2];
-    bananasPoints = 3 * bananas[0] + 2 * bananas[1] + bananas[2];
+function getWinnerTeam(apples, bananas) {
+    applePoints = (3 * apples.threePoints + 2 * apples.twoPoints + 1 * apples.onePoint);
+    bananaPoints = (3 * bananas.threePoints + 2 * bananas.twoPoints + 1 * bananas.onePoint);
 
-    if (applesPoints > bananasPoints) {
+    if (applePoints > bananaPoints) {
         return 'A';
-    } else if (applesPoints < bananasPoints) {
+    } else if (applePoints < bananaPoints) {
         return 'B';
     } else {
         return 'T';
     }
 }
 
-module.exports = teamWinner;
+module.exports = getWinnerTeam;

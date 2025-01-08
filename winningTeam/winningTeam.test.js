@@ -1,13 +1,19 @@
-const teamWinner = require('./winningTeam');
+const getWinnerTeam = require('./winningTeam');
 
-test('Apples Won', () => {
-    expect(teamWinner([1, 1, 1], [0, 0, 0])).toBe('A');
+test('Apple Won', () => {
+    const applePoints = { threePoints: 10, twoPoints: 7, onePoint: 5 };
+    const bananaPoints = { threePoints: 4, twoPoints: 6, onePoint: 4 };
+    expect(getWinnerTeam(applePoints, bananaPoints)).toBe('A');
 })
 
-test('Bananas Won', () => {
-    expect(teamWinner([0, 0, 0], [1, 1, 1])).toBe('B');
+test('Banana Won', () => {
+    const applePoints = { threePoints: 5, twoPoints: 7, onePoint: 5 };
+    const bananaPoints = { threePoints: 9, twoPoints: 9, onePoint: 10 };
+    expect(getWinnerTeam(applePoints, bananaPoints)).toBe('B');
 })
 
 test('Tie', () => {
-    expect(teamWinner([1, 1, 1], [1, 1, 1])).toBe('T');
+    const applePoints = { threePoints: 10, twoPoints: 7, onePoint: 4 };
+    const bananaPoints = { threePoints: 10, twoPoints: 7, onePoint: 4 };
+    expect(getWinnerTeam(applePoints, bananaPoints)).toBe('T');
 })
