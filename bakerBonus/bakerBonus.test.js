@@ -20,9 +20,3 @@ test('1 franchise, 2 day and 0 bonus', () => {
     const sales = [[10, 4]];
     expect(getTotalBonus(franchise, days, sales)).toBe(0);
 });
-
-
-// Calacule a soma de todos os items de um array.
-
-// Input: [1, 2, 3]
-// Output: 6
