@@ -1,33 +1,33 @@
 const getBallPosition = require('./threeCups');
 
-test('No swaps', () => {
+test('No Swaps', () => {
     expect(getBallPosition('')).toBe(1);
-});
+})
 
-test('Swap A', () => {
+test('One Swap', () => {
     expect(getBallPosition('A')).toBe(2);
-});
+})
 
-test('Swap B', () => {
+test('One Swap', () => {
     expect(getBallPosition('B')).toBe(1);
 })
 
-test('Swap C', () => {
+test('One Swap', () => {
     expect(getBallPosition('C')).toBe(3);
 })
 
-test('Swap AB', () => {
+test('Two Swaps', () => {
     expect(getBallPosition('AB')).toBe(3);
 })
 
-test('Swap BC', () => {
-    expect(getBallPosition('BC')).toBe(3);
-})
-
-test('Swap AC', () => {
+test('Two Swaps', () => {
     expect(getBallPosition('AC')).toBe(2);
 })
 
-test('Swap ABC', () => {
-    expect(getBallPosition('ABC')).toBe(1)
+test('Two Swaps', () => {
+    expect(getBallPosition('BC')).toBe(3);
+})
+
+test('Three Swaps', () => {
+    expect(getBallPosition('ABC')).toBe(1);
 })

@@ -46,18 +46,17 @@ function getBallPosition(swaps) {
         } else if (swap === 'B') {
             if (ballPosition === 2) {
                 ballPosition = 3;
-            } else if (ballPosition === 3) {
+            } else if(ballPosition === 3) {
                 ballPosition = 2;
             }
         } else if (swap === 'C') {
-            if (ballPosition === 1) {
-                ballPosition = 3;
-            } else if (ballPosition === 3) {
+            if (ballPosition === 3) {
                 ballPosition = 1;
+            } else if (ballPosition === 1) {
+                ballPosition = 3;
             }
-        }
+        }        
     }
-
     return ballPosition;
 }
 
