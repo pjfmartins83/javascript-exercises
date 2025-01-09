@@ -17,7 +17,7 @@ Output
 
 Output the number of words in the input line.
 
-**/
+*/
 
 function getWordCount(n) {
     if (n === '') {

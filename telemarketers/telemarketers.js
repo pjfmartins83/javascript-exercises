@@ -27,7 +27,7 @@ Output
 If the phone number belongs to a telemarketer, output ignore;
 otherwise, output answer.
 
-**/
+*/
 
 function isTelemarketer(phoneNumber) {
     if (

@@ -18,7 +18,7 @@ Output the volume of the right circular cone with radius r
 and height h. The formula to calculate the volume is
 (πr 2 h)/3
 
-**/
+*/
 
 function getConeVolume(r, h) {
     let volume = ((Math.PI * (r * r) * h) / 3);

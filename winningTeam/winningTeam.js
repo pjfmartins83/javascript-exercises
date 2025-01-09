@@ -32,7 +32,7 @@ If the Apples scored more points than the Bananas, output A (A for Apples).
 If the Bananas scored more points than the Apples, output B (B for Bananas).
 If the Apples and Bananas scored the same number of points, T (T for Tie).
 
-**/
+*/
 
 function getWinnerTeam(apples, bananas) {
     applePoints = (3 * apples.threePoints + 2 * apples.twoPoints + 1 * apples.onePoint);

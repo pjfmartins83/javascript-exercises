@@ -22,7 +22,7 @@ Example:
 - Input: 'LRRLLS'
 - Output: -1
 
-**/
+*/
 
 function getRoboPosition(moves) {
     let roboPosition = 0;

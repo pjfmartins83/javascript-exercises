@@ -31,7 +31,7 @@ Output the ﬁnal location of the ball:
 2 if the ball is at the middle
 3 if the ball is at the right
 
-**/
+*/
 
 function getBallPosition(swaps) {
     let ballPosition = 1;
