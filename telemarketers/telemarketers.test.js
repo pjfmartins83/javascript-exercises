@@ -1,9 +1,26 @@
 const isTelemarketer = require('./telemarketers');
 
-test('should return ignore', () => {
-    expect(isTelemarketer([8, 1, 1, 9])).toBe('ignore');
+test('Ignore the call', () => {
+    const telephoneNumer = [8, 1, 1, 9];
+    expect(isTelemarketer(telephoneNumer)).toBe('Ignore');
 })
 
-test('should return answer', () => {
-    expect(isTelemarketer([5, 4, 6, 2])).toBe('answer');
+test('Ignore the call', () => {
+    const telephoneNumer = [8, 1, 5, 4];
+    expect(isTelemarketer(telephoneNumer)).toBe('Answer');
+})
+
+test('Ignore the call', () => {
+    const telephoneNumer = [5, 2, 2, 7];
+    expect(isTelemarketer(telephoneNumer)).toBe('Answer');
+})
+
+test('Ignore the call', () => {
+    const telephoneNumer = [5, 8, 2, 8];
+    expect(isTelemarketer(telephoneNumer)).toBe('Answer');
+})
+
+test('Ignore the call', () => {
+    const telephoneNumer = [5, 8, 2, 4];
+    expect(isTelemarketer(telephoneNumer)).toBe('Answer');
 })

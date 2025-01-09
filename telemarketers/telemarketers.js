@@ -32,12 +32,12 @@ otherwise, output answer.
 function isTelemarketer(phoneNumber) {
     if (
         (phoneNumber[0] === 8 || phoneNumber[0] === 9) &&
-        (phoneNumber[1] === phoneNumber[2]) &&
-        (phoneNumber[3] === 8 || phoneNumber[3] === 9)
+        (phoneNumber[3] === 8 || phoneNumber[3] === 9) &&
+        (phoneNumber[1] === phoneNumber[2])
     ) {
-        return 'ignore';
+        return 'Ignore';
     } else {
-        return 'answer';
+        return 'Answer';
     }
 }
 
