@@ -1,13 +1,13 @@
 const getRoboPosition = require('./roboWalker');
 
-test('S move', () => {
+test('No Moves', () => {
     expect(getRoboPosition('S')).toBe(0);
-});
+})
 
-test('L move', () => {
+test('L Move', () => {
     expect(getRoboPosition('L')).toBe(-1);
-});
+})
 
-test('R move', () => {
+test('R Move', () => {
     expect(getRoboPosition('R')).toBe(1);
-});
+})

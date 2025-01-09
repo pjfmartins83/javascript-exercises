@@ -1,6 +1,6 @@
 /*
 
-RoboWalker
+The Challenge:
 
 You control a robot on a 1D Line (one dimensional line).
 Movement along the line involves either increasing (right) or decreasing (left) the number.
@@ -29,11 +29,11 @@ function getRoboPosition(moves) {
 
     for (let move of moves) {
         if (move === 'L') {
-            roboPosition -= 1; //move left
+            roboPosition -= 1;
         } else if (move === 'R') {
-            roboPosition += 1; //move right
+            roboPosition += 1;
         } else if (move === 'S') {
-            // stay in the same position, do nothing
+            // do nothing
         }
     }
 
