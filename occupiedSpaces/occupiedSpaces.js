@@ -29,16 +29,18 @@ Output
 
 Output the number of parking spaces that were occupied on both days.
 
-**/
+*/
 
-function occupiedSpaces(spaces, yesterday, today) {
+function getOccupiedSpaces(spaces, yesterday, today) {
     let count = 0;
+
     for (let i = 0; i < spaces; i++) {
         if (yesterday[i] === 'C' && today[i] === 'C') {
-            count++;
+            count += 1;
         }
     }
+
     return count;
 }
 
-module.exports = occupiedSpaces;
+module.exports = getOccupiedSpaces;
