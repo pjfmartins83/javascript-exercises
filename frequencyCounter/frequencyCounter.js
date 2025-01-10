@@ -4,7 +4,7 @@ The Challenge:
 
 Count the frequency of each letter that appearance in a string.
 
-**/
+*/
 
 function countLetters(string) {
     let letters = {}

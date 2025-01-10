@@ -11,3 +11,7 @@ test('One letter', () => {
 test('Two letters - 1 upper and 1 lower', () => {
     expect(countLetters('Aa')).toStrictEqual({a: 2});
 })
+
+test('One more test', () => {
+    expect(countLetters('AAbbCcdD')).toStrictEqual({a: 2, b: 2, c: 2, d: 2});
+})
