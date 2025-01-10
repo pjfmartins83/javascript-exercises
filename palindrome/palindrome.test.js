@@ -1,7 +1,7 @@
 const isPalindrome = require('./palindrome');
 
 test('Two letters', () => {
-    expect(isPalindrome('aa')).toBe(true);
+    expect(isPalindrome('Aa')).toBe(true);
 });
 
 test('example kayak', () => {

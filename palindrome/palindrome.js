@@ -26,6 +26,7 @@ Paulo
 
 Output:
 false
+
 */
 
 function isPalindrome(string) {
