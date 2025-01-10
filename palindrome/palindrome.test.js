@@ -1,5 +1,17 @@
-const palindrome = require('./palindrome');
+const isPalindrome = require('./palindrome');
 
-test('one letter', () => {
-    expect(palindrome('aa')).toBe(true);
+test('Two letters', () => {
+    expect(isPalindrome('aa')).toBe(true);
+});
+
+test('example kayak', () => {
+    expect(isPalindrome('kayak')).toBe(true);
+});
+
+test('example paulo', () => {
+    expect(isPalindrome('Paulo')).toBe(false);
+});
+
+test('example Borrow or rob', () => {
+    expect(isPalindrome('Borrow or rob')).toBe(true);
 });

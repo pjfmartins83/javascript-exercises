@@ -26,16 +26,18 @@ Paulo
 
 Output:
 false
-**/
+*/
 
-function palindrome(string) {
-    let reversedWord = '';
+function isPalindrome(string) {
+    let formattedString = string.replace(/\s+/g, '').toLowerCase();
+    let reverseWord = '';
 
-    for (let i = 1; i <= string.length; i++) {
-        reversedWord += string[string.length - i];
-    }    
-    
-    return reversedWord === string
+    for (let i = 0; i < formattedString.length; i++) {
+        reverseWord = formattedString[i] + reverseWord;
+    }
+
+    return reverseWord === formattedString;
+
 }
 
-module.exports = palindrome;
+module.exports = isPalindrome;
