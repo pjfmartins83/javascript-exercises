@@ -1,35 +1,33 @@
-const dataPlan = require('./dataPlan');
+const getMbAvailable = require('./dataPlan');
 
-test('One month and used all', () => {
-    const planMounthly = 10;
-    const months = 1;
-    const used = [10];
-    expect(dataPlan(planMounthly, months, used)).toBe(10);
-});
+test('1 month, 4mb used', () => {
+    expect(getMbAvailable(10, 1, [4])).toBe(6);
+})
 
-test('One month and no use', () => {
-    const planMounthly = 10;
-    const months = 1;
-    const used = [0];
-    expect(dataPlan(planMounthly, months, used)).toBe(20);
-});
+test('2 months, 12mb used', () => {
+    expect(getMbAvailable(10, 2, [4, 12])).toBe(4);
+})
 
-test('Two months and partial used', () => {
-    const planMounthly = 10;
-    const months = 2;
-    const used = [0, 5];
-    expect(dataPlan(planMounthly, months, used)).toBe(25);
-});
+test('3 month, 1mb used', () => {
+    expect(getMbAvailable(10, 3, [4, 12, 1])).toBe(13);
+})
+
+test('4 months, no data used', () => {
+    expect(getMbAvailable(10, 4, [4, 12, 1, 0])).toBe(23);
+})
 
 /*
 
-Dia 1 (Mês 1) = 10mb
-Usou: 0mb
-Sobra = 10mb
+(Mês 1) = 10mb
+Usou: 4mb
+Sobra = 6mb
 
-Dia 1 (Mês 2) = 10mb + 10mb => 20mb
-Usou: 5mb
-Sobra: 15mb
+(Mês 2) = 6mb + 10mb = 16mb
+Usou: 12mb
+Sobra: 4mb
 
-Dia 1 (Mês 3) = 10mb + 15mb =>25mb
-**/
+(Mês 3) = 4mb + 10mb = 14mb
+Usou: 1mb
+Sobra: 13mb
+
+*/

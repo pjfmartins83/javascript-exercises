@@ -35,16 +35,16 @@ Output
 
 Output the number of megabytes available for the next month.
 
-**/
+*/
 
-function dataPlan(planMounthly, months, used) {
-    let available = planMounthly;
+function getMbAvailable(mbPlan, months, used) {
+    let mbAvailable = 0;
 
     for (let i = 0; i < months; i++) {
-        available = available - used[i];
-        available = planMounthly + available;  
-    } 
-    return available;   
+        mbAvailable = mbAvailable + mbPlan - used[i];
+    }
+
+    return mbAvailable;
 }
 
-module.exports = dataPlan;
+module.exports = getMbAvailable;
