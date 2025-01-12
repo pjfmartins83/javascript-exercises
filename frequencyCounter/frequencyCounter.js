@@ -10,11 +10,11 @@ function countLetters(string) {
     let letters = {}
     string = string.toLowerCase();
 
-    for (let letter of string) {
-        if (letters[letter]) {
-            (letters[letter]) += 1;
+    for (i = 0; i < string.length; i++) {        
+        if (letters[string[i]]) {
+            (letters[string[i]]) += 1;
         } else {
-            (letters[letter]) = 1;
+            (letters[string[i]]) = 1;
         }
     }
 

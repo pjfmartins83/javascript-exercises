@@ -18,22 +18,20 @@ Output:
 
 Output Luka’s original sentence.
 
-**/
+*/
 
 function decodeSentence(lukeSentence) {
-    
     let decodedSentence = '';
-    for (let i = 0; i < lukeSentence.length; i++) {
-        decodedSentence += lukeSentence[i];
+    let vowels = ['a', 'e', 'i', 'o', 'u'];
 
-        if ('aeiou'.includes(lukeSentence[i])) {
-            i += 2;
+    for (i = 0; i < lukeSentence.length; i++) {
+        if (vowels.includes(lukeSentence[i])) {
+            i = i + 2;            
         }
+        decodedSentence = decodedSentence + lukeSentence[i];
     }
 
     return decodedSentence;
-  }
+}
 
 module.exports = decodeSentence;
-
-console.log(decodeSentence('ipi lipikepe yopoupu'));
