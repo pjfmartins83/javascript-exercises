@@ -26,15 +26,15 @@ Return an integer indicating the number of students who were present on both day
 */
 
 function getStudentsAttendance(n, yesterday, today) {
-    let attendancelist = 0;
+    let attendanceList = 0;
 
     for (i = 0; i < n; i++) {
         if (yesterday[i] === 'P' && today[i] === 'P') {
-            attendancelist += 1;
+            attendanceList += 1;
         }
     }
 
-    return attendancelist;
+    return attendanceList;
 }
 
 module.exports = getStudentsAttendance;

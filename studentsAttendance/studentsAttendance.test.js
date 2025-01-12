@@ -19,3 +19,7 @@ test('2 students, one was present yesterday and another is present today', () =>
 test('2 students, only one is present in both days', () => {
     expect(getStudentsAttendance(2, 'PA', 'PP')).toBe(1);
 })
+
+test('3 students, all of them present in both days', () => {
+    expect(getStudentsAttendance(3, 'PPP', 'PPP')).toBe(3);
+})
