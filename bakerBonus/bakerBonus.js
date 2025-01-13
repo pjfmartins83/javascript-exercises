@@ -29,9 +29,6 @@ Determine the total number of bonuses awarded.
 
 Input:
 
-The input consists of 10 test cases. Each test case contains
-the following lines:
-
 - A line containing the integer number of franchisees f and integer number of days d,
 separated by a space. f is between 4 and 130, and d is between 2 and 4,745.
 
@@ -45,25 +42,28 @@ Each integer is between 1 and 13,000.
 Output: 
 For each test case, output the total number of bonuses awarded.
 
-Case Study: 1 franchise, 1 day and 13 sales
+*/
 
-
-
-
-
-**/
-
-function getTotalBonus(franchises, days, sales) { // [[10, 4]]
+function getTotalBonus(franchises, days, sales) {
     let totalBonus = 0;
-    for (let i = 0; i < franchises; i++) { // [10, 4]
-        for (let j = 0; j < days; j++) {
-            let dailySales = sales[i][j] // sales[0][0]
-            totalBonus += Math.floor(dailySales / 13)
-        }
-    }
-    
-    return totalBonus;
 
+    for (let i = 0; i < franchises; i++) {
+        let franchiseSales = 0;
+        for (let j = 0; j < days; j++) {
+            franchiseSales += sales[j][i];
+        }
+        totalBonus += Math.floor(franchiseSales / 13);
+    }
+
+    for (let j = 0; j < days; j++) {
+        let dailySales = 0;
+        for (let i = 0; i < franchises; i++) {
+            dailySales += sales[j][i];
+        }
+        totalBonus += Math.floor(dailySales / 13);
+    }
+
+    return totalBonus;
 }
 
 module.exports = getTotalBonus;
