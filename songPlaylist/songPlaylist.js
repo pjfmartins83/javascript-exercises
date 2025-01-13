@@ -41,29 +41,48 @@ Output the order of songs in the playlist after all button
 presses. The output must be on one line, with a space
 separating each pair of songs.
 
-**/
+*/
 
 function managePlaylist(inputs) {
     let playlist = ['A', 'B', 'C', 'D', 'E'];
 
-    for (const { button, presses } of inputs) {
+    for (let { button, presses } of inputs) {
+        let effectivePresses = presses % playlist.length;
         if (button === 1) {
-            for (let i = 0; i < presses; i++) {
+            for (let i = 0; i < effectivePresses; i++) {
                 playlist.push(playlist.shift());
             }
         } else if (button === 2) {
-            for (let i = 0; i < presses; i++) {
+            for (let i = 0; i < effectivePresses; i++) {
                 playlist.unshift(playlist.pop());
             }
         } else if (button === 3) {
-            for (let i = 0; i < presses; i++) {
-                [playlist[0], playlist [1]] = [playlist[1], playlist[0]];
+            for (let i = 0; i < effectivePresses; i++) {
+                [playlist[0], playlist[1]] = [playlist[1], playlist[0]];
             }
         } else if (button === 4) {
             return playlist;
         }
     }
+
     return playlist;
 }
 
 module.exports = managePlaylist;
+
+// function testPerformance(inputs) {
+//     console.time('managePlaylist');
+//     managePlaylist(inputs); // Chama a função que você quer testar
+//     console.timeEnd('managePlaylist');
+// }
+
+// // Criando entradas de teste
+// const inputs = [
+//     { button: 1, presses: 10000000 },
+//     { button: 2, presses: 50000000 },
+//     { button: 3, presses: 90000000 },
+//     { button: 4, presses: 1 }
+// ];
+
+// // Testando com entradas simuladas
+// testPerformance(inputs);
