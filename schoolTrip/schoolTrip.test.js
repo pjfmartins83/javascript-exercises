@@ -1,22 +1,13 @@
-const schoolTrip = require('./schoolTrip');
+const needMoney = require('./schoolTrip');
 
 test('money raised is sufficient - case study', () => {
-    const tripCost = 100;
-    const studentProportions = [0.25, 0.25, 0.25, 0.25];
-    const totalStudents = 100;
-    expect(schoolTrip(tripCost, studentProportions, totalStudents)).toBe("NO");
-});
+    expect(needMoney(100, [0.25, 0.25, 0.25, 0.25], 100)).toBe('No');
+})
 
 test('money raised is insufficient', () => {
-    const tripCost = 5000;
-    const studentProportions = [0.25, 0.25, 0.25, 0.25];
-    const totalStudents = 100;
-    expect(schoolTrip(tripCost, studentProportions, totalStudents)).toBe("YES");
-});
+    expect(needMoney(5000, [0.25, 0.25, 0.25, 0.25], 100)).toBe('Yes');
+})
 
 test('money raised is sufficient', () => {
-    const tripCost = 50;
-    const studentProportions = [0.25, 0.25, 0.25, 0.25];
-    const totalStudents = 100;
-    expect(schoolTrip(tripCost, studentProportions, totalStudents)).toBe("NO");
+    expect(needMoney(50, [0.25, 0.25, 0.25, 0.25], 100)).toBe('No');
 })

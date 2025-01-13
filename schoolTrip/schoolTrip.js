@@ -21,10 +21,6 @@ for the school trip.
 
 Input:
 
-The input consists of 10 test cases, with three lines per test
-case (30 lines in all). Here are the three lines for each test
-case:
-
 1. The ﬁrst line contains the cost in dollars of the school
 trip; it’s an integer between 50 and 50,000.
 
@@ -35,7 +31,7 @@ space between each pair of numbers. Each number is
 between 0 and 1, and their sum is 1 (for 100 percent).
 
 3. The third line contains integer n, the number of students
-attending the brunch. n is between 4 and 2,000.
+attending the brunch, n is between 4 and 2,000.
 
 Output:
 
@@ -48,26 +44,28 @@ School Trip: $100
 Proportion: [0.25, 0.25, 0.25, 0.25]
 Students: 100 -> (25 no 1º, 25 no 2º, 25 no 3º e 25 no 4º)
 
-Total Raised = First Year + Second Year + Third Year + Fourth Year
-Total Raised = ((12*100*0.25) + (10*100*0.25) + (7*100*0.25) + (5*100*0.25)) 
-Total Raised = 300 + 250 + 175 + 125
-Total Raised = 850 (before payment)
+Money Raised = First Year + Second Year + Third Year + Fourth Year
+Money Raised = ((12*100*0.25) + (10*100*0.25) + (7*100*0.25) + (5*100*0.25)) 
+Money Raised = 300 + 250 + 175 + 125
+Money Raised = 850 (before payment)
 
-Total Raised (after payment) = 850 / 2 => 425
+Money Raised (after payment) = 850 / 2 => 425
 
 425 >= 100 => So, the students don't need more money. Output: NO
 
-**/
+*/
 
-function schoolTrip(tripCost, studentProportions, totalStudents) {
+function needMoney(tripCost, studentProportion, totalStudents) {
     const payments = [12, 10, 7, 5];
-
     let moneyRaised = 0;
-    for (let i = 0; i < studentProportions.length; i++) {
-        moneyRaised += payments[i] * (totalStudents * studentProportions[i]);
+
+    for (let i = 0; i < studentProportion.length; i++) {
+        moneyRaised += (payments[i] * (studentProportion[i] * totalStudents));
     }
 
-        return (moneyRaised / 2) >= tripCost ? "NO" : "YES";
+    const moneyNeeded = moneyRaised / 2;
+
+    return moneyNeeded >= tripCost ? 'No' : 'Yes';
 }
 
-module.exports = schoolTrip;
+module.exports = needMoney;
