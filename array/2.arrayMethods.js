@@ -15,8 +15,7 @@
 - Create a new array containing the second and third elements of the original array using the slice method.
 - Print the new array.
 
-
-**/
+*/
 
 const numbers = [10, 20, 30, 40, 50];
 

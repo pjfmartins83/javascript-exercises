@@ -10,7 +10,7 @@
 - Access the second and fourth elements of the array.
 - Print them to the console.
 
-**/
+*/
 
 const numbers = [10, 20, 30, 40, 50];
 console.log(numbers);

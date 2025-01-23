@@ -19,7 +19,7 @@
 - Use the reduce method to find the sum of all the elements in the array.
 - Print the result.
 
-**/
+*/
 
 const numbers = [10, 20, 30, 40, 50];
 

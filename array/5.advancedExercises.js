@@ -13,5 +13,5 @@
 - Write a function rotateArray(arr, k) that rotates an array k steps to the right.
 Example: For arr = [1, 2, 3, 4, 5] and k = 2, the result should be [4, 5, 1, 2, 3].
 
-**/
+*/
 
