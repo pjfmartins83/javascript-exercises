@@ -3,7 +3,7 @@
 Two Sum Problem:
 Find two numbers in an array that add up to a specific target.
 
-Input 1 = [2, 7, 11, 15]
+Input 1 = [2, 7, 9, 11, 15, 7, 2]
 Input 2 (target) = 9
 
 Output = [2, 7]
@@ -24,7 +24,7 @@ function getSum(input, target) {
     return result;
 }
 
-const input = [2, 7, 11, 15, 7, 2];
+const input = [2, 7, 9, 11, 15, 7, 2];
 const target = 9;
 
 console.log(getSum(input, target));
