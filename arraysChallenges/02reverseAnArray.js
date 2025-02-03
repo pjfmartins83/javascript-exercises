@@ -9,14 +9,16 @@ output = [5, 4, 3, 2, 1]
 */
 
 function reverseArray(input) {
-    let reversedArray = [];
+    let left = 0;
+    let right = input.length - 1
 
-    for (let i = 0; i < input.length; i++) {
-        reversedArray.unshift(input[i]);
+    while (left < right) {
+        [input[left], input[right]] = [input[right], input[left]];
+        left ++;
+        right--;
     }
 
-    return reversedArray;
+    return input;
 }
 
 console.log(reverseArray([1, 2, 3, 4, 5]));
-console.log(reverseArray([5, 4, 3, 2, 1]));

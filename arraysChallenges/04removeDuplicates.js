@@ -23,7 +23,7 @@ function removeDuplicates(arr) {
     let uniques = [];
 
     for (let i = 0; i < arr.length; i++) {
-        if (!uniques[arr[i]]) {
+        if (!uniques.includes(arr[i])) {
             uniques.push(arr[i]);
         }
     }

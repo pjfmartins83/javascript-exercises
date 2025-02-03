@@ -6,7 +6,7 @@ Determine if the array is sorted in ascending order.
 input: [1, 2, 3, 4, 5]
 output: true
 
-input: [2, 1, 5, 7, 3, 1]
+input: [2, 1, 5, 3, 4]
 output: false
 
 */
